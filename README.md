@@ -45,11 +45,29 @@ npm run dev
 
 ## Getting Your Credentials
 
-| Credential | Where to get it |
-|-----------|----------------|
-| `TELEGRAM_BOT_TOKEN` | Message [@BotFather](https://t.me/BotFather) on Telegram, create a new bot |
-| `GROQ_API_KEY` | Sign up at [console.groq.com](https://console.groq.com), create an API key |
-| `ALLOWED_TELEGRAM_IDS` | Message [@userinfobot](https://t.me/userinfobot) on Telegram to get your user ID |
+### Telegram Bot Token
+
+1. Open Telegram, search for [@BotFather](https://t.me/BotFather)
+2. Send `/newbot`
+3. Enter a display name for your bot (e.g. `CJ Translator`)
+4. Enter a username for your bot (must end in `bot`, e.g. `cj_translator_bot`)
+5. BotFather will reply with your **bot token**, looks like `123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ`
+6. Copy the token into `.env` as `TELEGRAM_BOT_TOKEN`
+
+### Groq API Key
+
+1. Go to [console.groq.com](https://console.groq.com) and sign up (free)
+2. In the left sidebar, click **API Keys**
+3. Click **Create API Key**, give it a name
+4. Copy the generated key (starts with `gsk_`) into `.env` as `GROQ_API_KEY`
+
+### Allowed Telegram User IDs
+
+Only whitelisted users can use the bot. To find your Telegram user ID:
+
+1. Open Telegram, search for [@userinfobot](https://t.me/userinfobot)
+2. Send any message — it will reply with your user ID (a number like `123456789`)
+3. Copy the ID into `.env` as `ALLOWED_TELEGRAM_IDS`
 
 Multiple user IDs can be comma-separated: `123,456,789`
 
